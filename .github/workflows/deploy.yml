@@ -41,8 +41,7 @@ jobs:
 
       - name: Tag Docker Image
         run: |
-          docker tag task-app:latest \
-          ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/task-app:latest
+          docker tag task-app:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/task-app:latest
 
       - name: Push Docker Image
         run: |
