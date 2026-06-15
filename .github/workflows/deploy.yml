@@ -41,12 +41,11 @@ jobs:
 
       - name: Tag Docker Image
         run: |
-          docker tag task-app:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/task-app:latest
+          docker tag task-app:latest 310918477152.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/task-app:latest
 
       - name: Push Docker Image
         run: |
-          docker push \
-          ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/task-app:latest
+          docker push 310918477152.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/task-app:latest
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.3
