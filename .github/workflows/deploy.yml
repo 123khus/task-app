@@ -1,9 +1,12 @@
-name: Deploy
+name: ec2-deploy # Nice name is good name
 
 on:
   push:
     branches:
       - main
+      - dev
+      - stag
+  workflow_dispatch:
 
 jobs:
   deploy:
