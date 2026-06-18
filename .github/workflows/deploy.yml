@@ -62,4 +62,3 @@ steps:
         docker compose up -d
 
         docker ps
-```
